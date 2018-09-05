@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
-
+import './InventionsList.css'
 import ListInventionsContainer from './containers/ListInventionsContainer'
 
 
 class App extends Component {
   render() {
     return (
-      <div className="List">
+      <div className="InventionsList">
         <header className="List-header">
           <h1 className="List-title">Liste des Inventions</h1>
         </header>

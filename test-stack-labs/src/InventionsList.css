@@ -1,0 +1,67 @@
+.List-logo {
+    animation: PlayaList-logo-spin infinite 20s linear;
+    height: 80px;
+  }
+  
+  .List-header {
+    text-align: center;
+    background-color: #1abc9c;
+    height: 150px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .List-title {
+    font-size: 1.5em;
+  }
+  
+  .List-list {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  
+  .List-list > form > div {
+    display: flex;
+  }
+  
+  .List-list input {
+    padding: 10px 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-right: 5px;
+  }
+  .List-list input:nth-child(2) {
+    flex-grow: 1;
+  }
+  
+  .List-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .List-item img {
+    width: 100px;
+  }
+  
+  .List-item div {
+    vertical-align: top;
+    display: inline-block;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    width: 330px;
+  }
+  
+  .List-item .icon-cancel-circle {
+    vertical-align: top;
+    margin-top: 40px;
+    display: inline-block;
+    color: #666;
+  }
+  .List-item .icon-cancel-circle:hover {
+    color: #e55;
+  }
+  
+  @keyframes PlayaList-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }

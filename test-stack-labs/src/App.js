@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom'
+
+import ListInventionsContainer from './containers/ListInventionsContainer'
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+      <div className="List">
+        <header className="List-header">
+          <h1 className="List-title">Liste des Inventions</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <BrowserRouter>
+          <div className="List-list">
+            <Route path="/" component={ListInventionsContainer} />
+          </div>
+        </BrowserRouter>
       </div>
     );
   }

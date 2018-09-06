@@ -1,21 +1,31 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom'
+import Invention from './Invention'
 import './InventionsList.css'
-import ListInventionsContainer from './containers/ListInventionsContainer'
 
 
 class App extends Component {
+  state = {
+    inventions: []
+  }
+
+  componentDidMount() {
+    fetch('/api/inventions')
+    .then(res => res.json())
+    .then(inventions => this.setState({inventions: inventions}))
+  }
+
+
   render() {
     return (
       <div className="InventionsList">
         <header className="List-header">
           <h1 className="List-title">Liste des Inventions</h1>
         </header>
-        <BrowserRouter>
+
           <div className="List-list">
-            <Route path="/" component={ListInventionsContainer} />
+            <Invention inventionList={this.state.inventions} />
           </div>
-        </BrowserRouter>
+        
       </div>
     );
   }

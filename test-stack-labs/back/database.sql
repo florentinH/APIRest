@@ -1,6 +1,6 @@
 CREATE DATABASE IF NOT EXISTS stacklabs_inventions CHARACTER SET utf8 COLLATE utf8_general_ci;
-CREATE USER IF NOT EXISTS 'root'@'localhost' IDENTIFIED BY 'rootroot';
-GRANT ALL PRIVILEGES on stacklabs_inventions.* to 'root'@'localhost';
+CREATE USER IF NOT EXISTS 'stack'@'localhost' IDENTIFIED BY 'stack';
+GRANT ALL PRIVILEGES on stacklabs_inventions.* to 'stack'@'localhost';
 
 USE stacklabs_inventions;
 

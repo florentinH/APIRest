@@ -1,17 +1,18 @@
 CREATE DATABASE IF NOT EXISTS stacklabs_inventions CHARACTER SET utf8 COLLATE utf8_general_ci;
-CREATE USER IF NOT EXISTS 'stacklabs'@'localhost' IDENTIFIED BY 'azerty1234';
-GRANT ALL PRIVILEGES on stacklabs_inventions.* to 'stacklabs'@'localhost';
+CREATE USER IF NOT EXISTS 'root'@'localhost' IDENTIFIED BY 'rootroot';
+GRANT ALL PRIVILEGES on stacklabs_inventions.* to 'root'@'localhost';
 
 USE stacklabs_inventions;
 
-CREATE TABLE IF NOT EXISTS items (
+CREATE TABLE IF NOT EXISTS inventions (
   id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(255),
-  picture VARCHAR(255)
-);
+  name VARCHAR(255) DEFAULT NULL,
+  inventor VARCHAR(255) DEFAULT NULL,
+  date DATE DEFAULT NULL, 
+  origin VARCHAR(255) DEFAULT NULL,
+  site VARCHAR(255) DEFAULT NULL
+) ENGINE=InnoDB;
 
-INSERT INTO items (name, picture) VALUES
-  ('Tongs','/images/tongs.jpg'),
-  ('Ballon de plage','/images/ballon.jpg'),
-  ('Raquettes de plage','/images/raquettes.jpg'),
-  ('Bouée grenouille','/images/bouee-grenouille.jpg');
+LOAD DATA INFILE 'inventions.json' INTO TABLE inventions;
+
+LOAD DATA INFILE 'inventions.json' INTO TABLE inventions COLUMNS TERMINATED BY '\t' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r';

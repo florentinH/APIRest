@@ -14,9 +14,9 @@ class  Invention extends React.Component {
                         <div>{invention.inventor}</div>
                         <div>{invention.origin}</div>
                         <div>{invention.site}</div>
-                        <button type="delete" className="IoIosCloseCircleOutline" onClick={() => this.props.handleDelete(invention.id)}>
+                        <span type="delete" className="IoIosCloseCircleOutline" onClick={() => this.props.handleDelete(invention.id)}>
                             <IoIosCloseCircleOutline />
-                        </button>
+                        </span>
                     </div>
                 ))}
             </div>

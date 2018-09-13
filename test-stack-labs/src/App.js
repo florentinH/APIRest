@@ -73,7 +73,7 @@ class App extends Component {
               <input name="origin" placeholder="Pays" onChange={this.handleChange}/>
               <input name="site" placeholder="Site internet" onChange={this.handleChange}/>
               <button type="submit">
-                <span type="submit" className="IoIosCheckmarkCircleOutline"><IoIosCheckmarkCircleOutline /></span>
+                <span type="submit" className="IoIosCheckmarkCircleOutline">Valider</span>
               </button>
             </div>          
           </form>

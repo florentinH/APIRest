@@ -20,8 +20,12 @@
     margin: 0 auto;
   }
   
-  .List-list > form > div {
+  /*.List-list > form > div {
     display: flex;
+  }*/
+
+  .List-list .IoIosCheckmarkCircleOutline {
+    
   }
   
   .List-list input {
@@ -46,18 +50,18 @@
   .List-item div {
     vertical-align: top;
     display: inline-block;
-    padding: 40px 20px;
+    padding: 5px 20px;
     box-sizing: border-box;
     width: 330px;
   }
   
-  .List-item .icon-cancel-circle {
+  .List-item .IoIosCloseCircleOutline {
     vertical-align: top;
     margin-top: 40px;
     display: inline-block;
     color: #666;
   }
-  .List-item .icon-cancel-circle:hover {
+  .List-item .IoIosCloseCircleOutline:hover {
     color: #e55;
   }
   

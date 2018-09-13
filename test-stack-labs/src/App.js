@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Invention from './Invention'
 import './InventionsList.css'
+import { IoIosCheckmarkCircleOutline } from "react-icons/io";
+
 
 
 
@@ -24,7 +26,7 @@ class App extends Component {
     })
   }
 
-  handleSubmit = () => {
+  handleSubmit = (e) => {
     fetch('/api/inventions', {
       method: 'POST',
       headers: new Headers({
@@ -35,6 +37,21 @@ class App extends Component {
     .then(res => res.json())
     .then(newInvention => {
       console.log(newInvention)
+    })
+  }
+
+  handleDelete = (id) => {
+    fetch(`/api/inventions/${id}`, {
+      method: 'DELETE'
+    })
+    .then(res => res.json())
+    .then(res => {
+      const inventionsCopy = [...this.state.inventions]
+      const index = inventionsCopy.findIndex(invention => {
+        return invention.id === id}
+        )
+      inventionsCopy.splice(index, 1)
+      this.setState({ inventions: inventionsCopy })
     })
   }
 
@@ -56,14 +73,16 @@ class App extends Component {
               <input name="origin" placeholder="Pays" onChange={this.handleChange}/>
               <input name="site" placeholder="Site internet" onChange={this.handleChange}/>
               <button type="submit">
-                <span className="icon-checkmark">Valider</span>
+                <span type="submit" className="IoIosCheckmarkCircleOutline"><IoIosCheckmarkCircleOutline /></span>
               </button>
             </div>          
           </form>
         </div>
 
           <div className="List-list">
-            <Invention inventionList={this.state.inventions} />
+            <Invention 
+              inventionList={this.state.inventions}
+              handleDelete = {this.handleDelete} />
           </div>
         
       </div>

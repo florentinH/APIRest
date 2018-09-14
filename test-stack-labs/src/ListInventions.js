@@ -57,6 +57,7 @@ class ListInventions extends Component {
             <div>
     
             <div className="List-list">
+              <h1 className="List-title">Liste des Inventions</h1>
               <form onSubmit={this.handleSubmit}>
                 <h5>Ajouter une invention</h5>
                 <div>

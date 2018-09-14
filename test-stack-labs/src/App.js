@@ -19,10 +19,9 @@ class App extends Component {
       <Router>
        <div className="InventionsList">
           <header className="List-header">
-            <h1 className="List-title">Liste des Inventions</h1>
             <div>
-                <Link to='/' >INITIALISATION</Link><br />
-                <Link to='/ListInventions' >LISTE COMPLETE</Link>
+                <Link to='/' ><h1>DECOUVERTE</h1></Link>
+                <Link to='/ListInventions' ><h1>LISTE COMPLETE</h1></Link>
             </div>
           </header>
         <Switch>

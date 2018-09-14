@@ -19,6 +19,7 @@ class Home extends Component {
     return (
       
       <div className="List-list">
+         <h1 className="List-title">Découverte</h1>
           {this.state.inventions.map((invention, k) => (
               <div key={k} className="List-item" >
                   <div>{invention.name}</div>

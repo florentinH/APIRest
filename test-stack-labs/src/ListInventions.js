@@ -54,10 +54,7 @@ class ListInventions extends Component {
 
     render() {
         return (
-            <div className="InventionsList">
-            <header className="List-header">
-              <h1 className="List-title">Liste des Inventions</h1>
-            </header>
+            <div>
     
             <div className="List-list">
               <form onSubmit={this.handleSubmit}>

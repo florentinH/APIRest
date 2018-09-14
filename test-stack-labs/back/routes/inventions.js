@@ -2,7 +2,7 @@ const express = require ('express')
 const db = require('../db')
 const router = express.Router()
 
-router.get('/List', (req, res)=> {
+router.get('/', (req, res)=> {
     db.query('SELECT * FROM inventions ORDER BY date, name ASC', (err, inventions) => {
         if (err) {
             console.err(err)
@@ -13,7 +13,7 @@ router.get('/List', (req, res)=> {
     })
 })
 
-router.post('/List', (req, res) => {
+router.post('/', (req, res) => {
     const {date, name, inventor, origin, site} = req.body
     const query = 'INSERT INTO inventions (date, name, inventor, origin, site) VALUES (?, ?, ?, ?, ?)'
     const selectQuery = 'SELECT * from inventions WHERE id = ?'
@@ -33,7 +33,7 @@ router.post('/List', (req, res) => {
     })
   })
 
-  router.delete('/list/:id', (req, res) => {
+  router.delete('/:id', (req, res) => {
     const id = req.params.id
     const query = 'DELETE FROM inventions WHERE id = ?'
     db.query(query, [id], (err, result) => {

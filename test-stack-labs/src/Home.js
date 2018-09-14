@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 // import Invention from './Invention'
 import './InventionsList.css'
 
-const API = 'http://www.localhost:5000/inventions'
-const DEFAULT_QUERY = 'redux';
+const API = '/inventions'
+// const DEFAULT_QUERY = 'redux';
 
   // const contentContainer = document.getElementById('content')
 
@@ -16,9 +16,9 @@ class Home extends Component {
 
   
   componentDidMount() {
-    fetch(API + DEFAULT_QUERY)
+    fetch(API)
     .then(res => res.json())
-    .then(data => console.log(this.setState({ inventions: data.inventions})))
+    .then(data => this.setState({ inventions: data}))
   }
 
 //   .then(data => {

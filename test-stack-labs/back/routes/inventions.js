@@ -3,7 +3,7 @@ const db = require('../db')
 const router = express.Router()
 
 router.get('/', (req, res)=> {
-    db.query('SELECT * FROM inventions', (err, inventions) => {
+    db.query('SELECT * FROM inventions ORDER BY date, name ASC', (err, inventions) => {
         if (err) {
             console.err(err)
             return res.status(500).json({error: 'incorrect query'})

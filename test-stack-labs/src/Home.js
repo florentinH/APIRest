@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 import './InventionsList.css'
 
 const API = '/inventions'
-// const DEFAULT_QUERY = 'redux';
-
-  // const contentContainer = document.getElementById('content')
-
 
 class Home extends Component {
 
@@ -20,10 +16,6 @@ class Home extends Component {
     .then(res => res.json())
     .then(data => this.setState({ inventions: data}))
   }
-
-//   .then(data => {
-//     contentContainer.innerHTML = data.map(createCharacterElement).join("")
-//  })
 
   render() {
     return (

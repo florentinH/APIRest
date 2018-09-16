@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const originalInventions = require('./inventions.json')
 const app = express()
-const inventionsRouter = require ('./routes/inventions')
+// const inventionsRouter = require ('./routes/inventions')
 
 originalInventions.forEach((invention, index) => {
     invention.id = index + 1
@@ -10,7 +10,6 @@ originalInventions.forEach((invention, index) => {
 
 let inventions = [...originalInventions]
 let nextId = inventions.length + 1 
-
 
 
 
@@ -35,7 +34,7 @@ const compareinvention = (a, b) => {
 
 
 app.get('/inventions', (req, res) => {
-    inventoins.sort()
+    inventions.sort(compareinvention)
     res.json(inventions)
 })
 
@@ -52,7 +51,10 @@ app.put('/inventions/init', (req, res) => {
     nextId = inventions.length + 1 
 })
 
-app.use('/api/inventions', inventionsRouter)
+app.delete('/:id', (req, res) => {
+
+})
+
 
 console.log('Listening on port 5000') 
 app.listen(5000)

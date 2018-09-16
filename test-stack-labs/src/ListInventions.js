@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Invention from './Invention'
 import './InventionsList.css'
 
+
 class ListInventions extends Component {
 
     state = {
@@ -10,9 +11,9 @@ class ListInventions extends Component {
       }
     
       componentDidMount() {
-        fetch('/api/inventions')
+        fetch('/inventions')
         .then(res => res.json())
-        .then(inventions => this.setState({inventions: inventions}))
+        .then(data => this.setState({inventions: data}))
       }
     
       handleChange = e => {
@@ -24,7 +25,7 @@ class ListInventions extends Component {
       }
     
       handleSubmit = (e) => {
-        fetch('/api/inventions', {
+        fetch('/inventions', {
           method: 'POST',
           headers: new Headers({
             'Content-Type': 'application/json'
@@ -38,7 +39,7 @@ class ListInventions extends Component {
       }
     
       handleDelete = (id) => {
-        fetch(`/api/inventions/${id}`, {
+        fetch(`/inventions/${id}`, {
           method: 'DELETE'
         })
         .then(res => res.json())

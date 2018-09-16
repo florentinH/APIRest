@@ -60,6 +60,9 @@ app.delete('/inventions/:id', (req, res) => {
     inventions.splice(index, 1)
 })
 
+app.get('/inventions/:id', (req, res) => {
+    res.json(invention)})
+
 
 console.log('Listening on port 5000') 
 app.listen(5000)

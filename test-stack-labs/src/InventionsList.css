@@ -69,3 +69,41 @@
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
   }
+
+  List-item > .popup-content {
+    width: 400px;
+  }
+
+  List-item > .modal {
+    font-size: 12px;
+  }
+  List-item > .modal > .header {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+  }
+  List-item > .modal > .content {
+    width: 100%;
+    padding: 10px 5px;
+  }
+  List-item > .modal > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+  }
+  List-item > .modal > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+  }

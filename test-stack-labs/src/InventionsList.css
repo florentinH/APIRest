@@ -1,7 +1,3 @@
-.List-logo {
-    animation: PlayaList-logo-spin infinite 20s linear;
-    height: 80px;
-  }
   
   .List-header {
     text-align: center;
@@ -10,22 +6,37 @@
     padding: 20px;
     color: white;
   }
+
+  .link {
+    color: white;
+    text-decoration:none
+
+  }
+
+  .link:hover {
+
+  }
   
   .List-title {
     font-size: 1.5em;
+    text-align: center;
+
+  }
+
+  .list-new {
+    padding: 10px 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-right: 5px;
   }
   
   .List-list {
     max-width: 450px;
-    margin: 0 auto;
+    margin: 30px auto;
   }
-  
-  /*.List-list > form > div {
-    display: flex;
-  }*/
 
-  .List-list .IoIosCheckmarkCircleOutline {
-    
+  .List-list > form > div {
+    display: block;
   }
   
   .List-list input {
@@ -41,6 +52,8 @@
   .List-item {
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
+    text-align: center;
+    max-width: 700px;
   }
   
   .List-item img {
@@ -68,42 +81,4 @@
   @keyframes PlayaList-logo-spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
-  }
-
-  List-item > .popup-content {
-    width: 400px;
-  }
-
-  List-item > .modal {
-    font-size: 12px;
-  }
-  List-item > .modal > .header {
-    width: 100%;
-    border-bottom: 1px solid gray;
-    font-size: 18px;
-    text-align: center;
-    padding: 5px;
-  }
-  List-item > .modal > .content {
-    width: 100%;
-    padding: 10px 5px;
-  }
-  List-item > .modal > .actions {
-    width: 100%;
-    padding: 10px 5px;
-    margin: auto;
-    text-align: center;
-  }
-  List-item > .modal > .close {
-    cursor: pointer;
-    position: absolute;
-    display: block;
-    padding: 2px 5px;
-    line-height: 20px;
-    right: -10px;
-    top: -10px;
-    font-size: 24px;
-    background: #ffffff;
-    border-radius: 18px;
-    border: 1px solid #cfcece;
   }

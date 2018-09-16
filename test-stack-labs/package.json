@@ -21,12 +21,18 @@
     "server": "nodemon back/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test-back": "jest back/tests",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "nsp": "^2.1.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "concurrently": "^3.5.0",
+    "jest": "^23.6.0",
     "mysql": "^2.16.0",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "nsp": "^2.1.0",
+    "superagent": "^3.8.3",
+    "supertest": "^3.3.0"
   }
 }

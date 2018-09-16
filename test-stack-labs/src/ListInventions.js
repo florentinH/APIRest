@@ -37,6 +37,19 @@ class ListInventions extends Component {
           console.log(newInvention)
         })
       }
+      
+
+      handleResetList = () => {
+        fetch(`/inventions/init`, {
+          method: 'PUT',
+          headers: new Headers({
+            'Content-Type': 'application/json'
+          }),
+        })
+        .then(res => res.json())
+        .then(inventions => this.setState({ inventions: inventions }))
+      }
+
     
       handleDelete = (id) => {
         fetch(`/inventions/${id}`, {
@@ -46,14 +59,7 @@ class ListInventions extends Component {
           }),
         })
         .then(res => res.json())
-        .then(inventions => this.setState({ inventions: inventions }))
-          // const inventionsCopy = [...this.state.inventions]
-          // const index = inventionsCopy.findIndex(invention => {
-          //   return invention.id === id}
-          //   )
-          // inventionsCopy.splice(index, 1)
-          // this.setState({ inventions: inventionsCopy })
-        
+        .then(inventions => this.setState({ inventions: inventions }))       
       }
 
     render() {

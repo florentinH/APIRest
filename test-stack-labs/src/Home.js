@@ -21,7 +21,7 @@ class Home extends Component {
     return (
       
       <div id="content" className="List-list">
-         <h1 className="List-title">Découverte</h1>
+         <h1 className="List-title">Les plus grandes inventions</h1>
           {this.state.inventions.map((invention, k) => (
               <div key={k} className="List-item" >
                   <div>{invention.name}</div>

@@ -18,10 +18,10 @@ class App extends Component {
     return (
       <Router>
        <div className="InventionsList">
-          <header className="List-header">
-            <div>
-                <Link to='/' ><h1>DECOUVERTE</h1></Link>
-                <Link to='/ListInventions' ><h1>LISTE COMPLETE</h1></Link>
+          <header className="List-header" >
+            <div >
+                <Link className="link" to='/' ><h1>LES INVENTIONS</h1></Link>
+                <Link className="link" to='/ListInventions' ><h1>AJOUTER UNE INVENTION</h1></Link>
             </div>
           </header>
         <Switch>

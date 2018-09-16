@@ -40,17 +40,20 @@ class ListInventions extends Component {
     
       handleDelete = (id) => {
         fetch(`/inventions/${id}`, {
-          method: 'DELETE'
+          method: 'DELETE',
+          headers: new Headers({
+            'Content-Type': 'application/json'
+          }),
         })
         .then(res => res.json())
-        .then(res => {
-          const inventionsCopy = [...this.state.inventions]
-          const index = inventionsCopy.findIndex(invention => {
-            return invention.id === id}
-            )
-          inventionsCopy.splice(index, 1)
-          this.setState({ inventions: inventionsCopy })
-        })
+        .then(inventions => this.setState({ inventions: inventions }))
+          // const inventionsCopy = [...this.state.inventions]
+          // const index = inventionsCopy.findIndex(invention => {
+          //   return invention.id === id}
+          //   )
+          // inventionsCopy.splice(index, 1)
+          // this.setState({ inventions: inventionsCopy })
+        
       }
 
     render() {

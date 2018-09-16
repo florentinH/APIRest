@@ -51,8 +51,13 @@ app.put('/inventions/init', (req, res) => {
     nextId = inventions.length + 1 
 })
 
-app.delete('/:id', (req, res) => {
-
+app.delete('/inventions/:id', (req, res) => {
+    
+    const id = req.params.id
+    const index = inventions.findIndex(invention => {
+        return invention.id === id
+    })
+    inventions.splice(index, 1)
 })
 
 

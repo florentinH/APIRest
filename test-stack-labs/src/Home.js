@@ -28,7 +28,7 @@ class Home extends Component {
                   <div>{invention.date}</div>
                   <div>{invention.inventor}</div>
                   <div>{invention.origin}</div>
-                  <div>{invention.site}</div>
+                  <div><a className="link-site" href={invention.site} target="_blank">{invention.site}</a></div>
               </div>
           ))}
       </div>     

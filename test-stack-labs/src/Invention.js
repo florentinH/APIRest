@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
 
@@ -15,7 +16,9 @@ class  Invention extends React.Component {
                             <div>{invention.date}</div>
                             <div>{invention.inventor}</div>
                             <div>{invention.origin}</div>
-                            <div>{invention.site}</div>
+                            <div><a className="link-site" href={invention.site} target="_blank">{invention.site}</a></div>
+                            
+
                         </div>
                         <di>
                             <span type="delete" className="IoIosCloseCircleOutline" onClick={() => this.props.handleDelete(invention.id)}>

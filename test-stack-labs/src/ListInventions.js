@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Invention from './Invention'
-import './InventionsList.css'
 
 
 class ListInventions extends Component {
@@ -76,8 +75,8 @@ class ListInventions extends Component {
                   <input name="inventor" placeholder="Nom de l'inventeur" onChange={this.handleChange}/>
                   <input name="origin" placeholder="Pays" onChange={this.handleChange}/>
                   <input name="site" placeholder="Site internet" onChange={this.handleChange}/>
-                  <button type="submit">
-                    <span type="submit" className="IoIosCheckmarkCircleOutline">Valider</span>
+                  <button className="button-valider" type="submit">
+                    <span type="submit">Valider</span>
                   </button>
                 </div>          
               </form>

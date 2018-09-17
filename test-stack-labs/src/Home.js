@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 // import Invention from './Invention'
-import './InventionsList.css'
 
 const API = '/inventions'
 

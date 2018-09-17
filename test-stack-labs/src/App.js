@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
-
-import './InventionsList.css'
-
 import ListInventions from './ListInventions'
 import Home from './Home'
 

@@ -20,12 +20,9 @@ class  Invention extends React.Component {
                             
 
                         </div>
-                        <di>
                             <span type="delete" className="IoIosCloseCircleOutline" onClick={() => this.props.handleDelete(invention.id)}>
                                 <IoIosCloseCircleOutline />
-                            </span>
-                        </di>
-                        
+                            </span>                        
                     </div>
                     
                 ))}
